@@ -1,0 +1,26 @@
+version: "3.1"
+
+services:
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoroot
+      - MONGO_INITDB_ROOT_PASSWORD=Hola789520
+    volumes:
+      - mongodb-data
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=mongoroot
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=Hola789520
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_BASICAUTH_USERNAME=mongoexpress
+      - ME_CONFIG_BASICAUTH_PASSWORD=mongoexpress
