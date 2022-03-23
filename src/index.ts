@@ -1,3 +1,3 @@
-import { StartUp } from "./startUp";
+import { StartUp } from "./StartUp";
 
 StartUp.Build().then();

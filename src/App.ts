@@ -32,7 +32,7 @@ export class App {
   private initConfig(server: InversifyExpressServer): void {
     server.setConfig((app: Application) => {
       app.use(express.json());
-      app.use(morgan("common"));
+      app.use(morgan("dev"));
       app.use(compression());
       app.use(cors());
       app.use(helmet());
