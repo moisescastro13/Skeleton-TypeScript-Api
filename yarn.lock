@@ -2,6 +2,21 @@
 # yarn lockfile v1
 
 
+"@automapper/classes@^7.3.14":
+  version "7.3.14"
+  resolved "https://registry.yarnpkg.com/@automapper/classes/-/classes-7.3.14.tgz#8b2423843b1222773ce8c8f83f458697361db58e"
+  integrity sha512-baqTwUoIIUWPcW+ScAckmNTkM9AUkc3S8IPpyU2vCNkwxTwkDjPWH1dhCMpKhxn6VQ0C7i+gi8csNDUqKP0s9Q==
+
+"@automapper/core@^7.3.14":
+  version "7.3.14"
+  resolved "https://registry.yarnpkg.com/@automapper/core/-/core-7.3.14.tgz#4a791800e0c3945b96c2fd045bf231821b0f30a2"
+  integrity sha512-l20PUmE9bvNBVsbeEqhYNoLd7cd2ycM9IK5XidHl6QrlrvK4yznkImwgRdt/T0ApLb6zYH/NdaHCa21Kc09sEg==
+
+"@automapper/types@^6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@automapper/types/-/types-6.3.1.tgz#cd40423142d7fe1bb9f18274ca0e2b2b7e26e807"
+  integrity sha512-f0Y/Q4dVfKH6SQyzS5bPk+hZ4pSxzVNAOPEHdEAUe3gAc6ou43DCBYERuOaVSZ3zbWJbVt1KgWVNLP1dj9OIeg==
+
 "@cspotcode/source-map-consumer@0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-consumer/-/source-map-consumer-0.8.0.tgz#33bf4b7b39c178821606f669bbc447a6a629786b"

@@ -12,6 +12,9 @@ export class TrackDto {
   public name: string;
   @Expose()
   @IsNotEmpty()
+  public album: string;
+  @Expose()
+  @IsNotEmpty()
   public cover: string;
   @Expose()
   @IsNotEmpty()
