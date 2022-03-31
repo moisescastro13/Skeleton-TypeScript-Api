@@ -1,18 +1,19 @@
 import "reflect-metadata";
 import { InversifyExpressServer } from "inversify-express-utils";
 
-import "./Routes/index";
+import "./Api/Controllers/";
 import container from "./IocContainer";
 import { App } from "./App";
 
 export class Server {
   private readonly _server: InversifyExpressServer;
-
   private constructor() {
-    this._server = new InversifyExpressServer(container);
-    this.StartApp();
+    this._server = new InversifyExpressServer(container, null, {
+      rootPath: "/api",
+    });
+    this.ConfigApp();
   }
-  StartApp() {
+  ConfigApp() {
     new App(this._server);
   }
 

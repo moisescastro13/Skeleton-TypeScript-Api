@@ -8,17 +8,25 @@ import helmet from "helmet";
 import { ConfigKeys, IConfigurationService } from "./config";
 import container from "./IocContainer";
 import { IocTypes } from "./Common";
+import { IDbContext } from "./DataBase";
 
 export class App {
   private readonly _configService: IConfigurationService;
+  private readonly _context: IDbContext;
   private _app: Application;
   public constructor(server: InversifyExpressServer) {
     this._configService = container.get<IConfigurationService>(
       IocTypes.IConfigurationService
     );
-    this.build(server);
+    this._context = container.get<IDbContext>(IocTypes.IDbContext);
     this.initConfig(server);
+    this.build(server);
+    this.StartDb();
     this.listen();
+  }
+
+  private StartDb() {
+    this._context.CreateConn();
   }
 
   private initConfig(server: InversifyExpressServer): void {
